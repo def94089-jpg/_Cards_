@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "UNO Gold Card",
+    "price": 299,
+    "category": "UNO",
+    "image": "../assets/images/products/uno-gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+  {
+    "id": 2,
+    "name": "UNO Black Card",
+    "price": 399,
+    "category": "UNO",
+    "image": "../assets/images/products/uno-black.jpg",
+    "description": "Stylish UNO Black Edition for collectors."
+  },
+  {
+    "id": 3,
+    "name": "UNO Platinum Card",
+    "price": 499,
+    "category": "UNO",
+    "image": "../assets/images/products/uno-platinum.jpg",
+    "description": "Premium Platinum Edition with luxury finish."
+  },
+  {
+    "id": 4,
+    "name": "UNO Diamond Card",
+    "price": 799,
+    "category": "UNO",
+    "image": "../assets/images/products/uno-diamond.jpg",
+    "description": "Diamond Edition for premium customers."
+  }
+]
