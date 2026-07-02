@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Successful | Cards</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="container">
+
+<div class="logo">
+
+<a href="../index.html">
+
+<img src="../assets/images/logo/logo.jpg" alt="Cards Logo">
+
+</a>
+
+<h2>Cards</h2>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="product-page">
+
+<div class="container">
+
+<div class="product-details">
+
+<h1>🎉 Thank You!</h1>
+
+<br>
+
+<h2>Your order has been received.</h2>
+
+<br>
+
+<p><strong>Name:</strong> <span id="customerName"></span></p>
+
+<p><strong>Product:</strong> <span id="productName"></span></p>
+
+<p><strong>Quantity:</strong> <span id="productQuantity"></span></p>
+
+<p><strong>Total:</strong> ₹<span id="productTotal"></span></p>
+
+<br>
+
+<p>
+
+We will verify your payment and contact you soon.
+
+</p>
+
+<br>
+
+<a href="../index.html">
+
+<button>
+
+Back to Home
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const customer = JSON.parse(localStorage.getItem("customerDetails"));
+
+if(customer){
+
+document.getElementById("customerName").textContent = customer.name;
+
+document.getElementById("productName").textContent = customer.order.name;
+
+document.getElementById("productQuantity").textContent = customer.order.quantity;
+
+document.getElementById("productTotal").textContent = customer.order.total;
+
+}
+
+</script>
+
+</body>
+
+</html>
