@@ -4,7 +4,7 @@
     "name": "Aurora Elite Card",
     "code": "A1",
     "price": ₹1799,
-    "currency": "Bal:$203",
+    "currency": "Bal:$203"
     "category": "Aurora",
     "image": "../assets/images/products/A1.jpg",
     "description": "Aurora Elite premium debit card."
@@ -188,5 +188,5 @@
     "category": "Titanium",
     "image": "../assets/images/products/T2.jpg",
     "description": "Titanium Premium card."
-  }
+  }, 
     ]
