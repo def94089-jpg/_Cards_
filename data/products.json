@@ -1,34 +1,183 @@
 [
   {
     "id": 1,
-    "name": "Gold Card",
-    "price": 2989,
-    "category": "UNO",
-    "image": "../assets/images/products/F_Gold.jpg",
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:$209, 
+    "category": "Gold",
+    "image": "../assets/images/products/G1.jpg",
     "description": "Premium UNO Gold Edition Card with exclusive design."
   },
   {
-    "id": 2,
-    "name": "UNO Black Card",
-    "price": 399,
-    "category": "UNO",
-    "image": "../assets/images/products/uno-black.jpg",
-    "description": "Stylish UNO Black Edition for collectors."
+ "id": 1,
+    "name": "Gold Card+,
+    "price": ₹1799,
+    "Balance": Bal:$197, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
   },
-  {
-    "id": 3,
-    "name": "UNO Platinum Card",
-    "price": 499,
-    "category": "UNO",
-    "image": "../assets/images/products/uno-platinum.jpg",
-    "description": "Premium Platinum Edition with luxury finish."
+    {
+ "id": 1,
+    "name": "Premium Platinum Card,
+    "price": ₹1599,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
   },
-  {
-    "id": 4,
-    "name": "UNO Diamond Card",
-    "price": 799,
-    "category": "UNO",
-    "image": "../assets/images/products/uno-diamond.jpg",
-    "description": "Diamond Edition for premium customers."
-  }
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+    {
+ "id": 1,
+    "name": "Premium Gold Card,
+    "price": ₹1999,
+    "Balance": Bal:199, 
+    "category": "Gold",
+    "image": "../assets/images/products/F_Gold.jpg",
+    "description": "Premium UNO Gold Edition Card with exclusive design."
+  },
+  
 ]
