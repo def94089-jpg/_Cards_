@@ -3,16 +3,14 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | Cards</title>
+<title>Premium Cards Store | Login</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-
-    <link rel="stylesheet" href="../assets/css/auth.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/auth.css">
 
 </head>
 
@@ -22,127 +20,270 @@
 
 <header class="header">
 
-    <div class="container">
+<div class="container">
 
-        <a href="../index.html" class="logo">
+<a href="../index.html" class="logo">
 
-            <img src="../assets/images/logo/logo.png"
-                 alt="Cards Logo">
+<img src="../assets/images/logo/logo.jpg" alt="Premium Cards Logo">
 
-            <span>Cards</span>
+<span>Premium Cards Store</span>
 
-        </a>
+</a>
 
-        <nav class="navbar">
+<nav class="navbar">
 
-            <a href="../index.html">Home</a>
+<a href="../index.html">Home</a>
 
-            <a href="products.html">Products</a>
+<a href="products.html">Products</a>
 
-            <a href="about.html">About</a>
+<a href="about.html">About</a>
 
-            <a href="contact.html">Contact</a>
+<a href="contact.html">Contact</a>
 
-            <a href="login.html" class="active">Login</a>
+<a href="login.html" class="active">Login</a>
 
-        </nav>
+</nav>
 
-        <button class="menu-btn">
-
-            ☰
-
-        </button>
-
-    </div>
+</div>
 
 </header>
 
-<!-- ================= LOGIN ================= -->
+<!-- ================= AUTH SECTION ================= -->
 
 <section class="auth-section">
 
-    <div class="auth-box">
+<div class="auth-container">
 
-        <h1>Welcome Back 👋</h1>
+<div class="auth-card">
 
-        <p>
+<h1>Premium Cards Store</h1>
 
-            Login to continue shopping.
+<p class="subtitle">
 
-        </p>
+Secure • Fast • Trusted
 
-        <form id="loginForm">
+</p>
 
-            <div class="input-group">
+<div class="tab-buttons">
 
-                <label>Email Address</label>
+<button
+id="loginTab"
+class="tab active"
+onclick="showLogin()">
 
-                <input
-                       type="email"
-                       id="email"
-                       placeholder="Enter your email"
-                       required>
+Login
 
-            </div>
+</button>
 
-            <div class="input-group">
+<button
+id="signupTab"
+class="tab"
+onclick="showSignup()">
 
-                <label>Password</label>
+Create Account
 
-                <div class="password-box">
+</button>
 
-                    <input
-                           type="password"
-                           id="password"
-                           placeholder="Enter your password"
-                           required>
+</div>
 
-                    <button
-                            type="button"
-                            class="toggle-password"
-                            id="togglePassword">
+<!-- ================= LOGIN FORM ================= -->
 
-                        👁
+<div
+id="loginForm"
+class="form-section">
 
-                    </button>
+<div class="input-group">
 
-                </div>
+<label>Email</label>
 
-            </div>
+<input
+type="email"
+id="loginEmail"
+placeholder="Enter your email">
 
-            <button
-                    type="submit"
-                    class="login-btn">
+</div>
 
-                Login
+<div class="input-group">
 
-            </button>
+<label>Password</label>
 
-        </form>
+<input
+type="password"
+id="loginPassword"
+placeholder="Enter your password">
 
-        <div class="auth-links">
+</div>
 
-            <a href="forgot-password.html">
+<div class="options">
 
-                Forgot Password?
+<label>
 
-            </a>
+<input type="checkbox">
 
-            <a href="signup.html">
+Remember Me
 
-                Create Account
+</label>
 
-            </a>
+<a href="#">
 
-        </div>
+Forgot Password?
 
-    </div>
+</a>
+
+</div>
+
+<button
+class="primary-btn"
+type="button"
+onclick="login()">
+
+Login
+
+</button>
+
+<div class="divider">
+
+<span>OR</span>
+
+</div>
+
+<button
+class="google-btn"
+type="button"
+id="googleLogin">
+
+Continue with Google
+
+</button>
+
+<p class="switch-text">
+
+Don't have an account?
+
+<a href="#"
+onclick="showSignup()">
+
+Create one
+
+</a>
+
+</p>
+
+</div><!-- ================= SIGN UP FORM ================= -->
+
+<div
+id="signupForm"
+class="form-section"
+style="display:none;">
+
+<div class="input-group">
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="signupName"
+placeholder="Enter your full name">
+
+</div>
+
+<div class="input-group">
+
+<label>Email</label>
+
+<input
+type="email"
+id="signupEmail"
+placeholder="Enter your email">
+
+</div>
+
+<div class="input-group">
+
+<label>Password</label>
+
+<input
+type="password"
+id="signupPassword"
+placeholder="Create a password">
+
+</div>
+
+<button
+class="primary-btn"
+type="button"
+onclick="signUp()">
+
+Create Account
+
+</button>
+
+<div class="divider">
+
+<span>OR</span>
+
+</div>
+
+<button
+class="google-btn"
+type="button"
+id="googleSignup">
+
+Continue with Google
+
+</button>
+
+<p class="switch-text">
+
+Already have an account?
+
+<a href="#"
+onclick="showLogin()">
+
+Login
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+<script>
+
+function showSignup(){
+
+document.getElementById("loginForm").style.display="none";
+document.getElementById("signupForm").style.display="block";
+
+document.getElementById("loginTab").classList.remove("active");
+document.getElementById("signupTab").classList.add("active");
+
+}
+
+function showLogin(){
+
+document.getElementById("signupForm").style.display="none";
+document.getElementById("loginForm").style.display="block";
+
+document.getElementById("signupTab").classList.remove("active");
+document.getElementById("loginTab").classList.add("active");
+
+}
+
+</script>
+
 <script src="../assets/js/script.js"></script>
 
-<script src="../assets/js/auth.js"></script>
+<script
+type="module"
+src="../assets/js/auth.js">
+</script>
 
 </body>
 
