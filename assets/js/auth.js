@@ -1,101 +1,207 @@
-/* ==========================================
-   CARDS STORE
-   AUTH SCRIPT
-   Version : 1.0
-========================================== */
+import { auth, db } from "./firebase-config.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+import {
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+GoogleAuthProvider,
+signInWithPopup,
+sendPasswordResetEmail,
+onAuthStateChanged,
+signOut
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
-    /* ==========================
-       LOGIN FORM
-    ========================== */
+import {
+doc,
+setDoc,
+serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
-    const loginForm = document.getElementById("loginForm");
+/* ===============================
+   LOGIN
+================================*/
 
-    if (loginForm) {
+window.login = async function(){
 
-        loginForm.addEventListener("submit", function (event) {
+const email=document.getElementById("loginEmail").value.trim();
 
-            event.preventDefault();
+const password=document.getElementById("loginPassword").value;
 
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value;
+if(email==="" || password===""){
 
-            if (email === "") {
+alert("Please fill all fields.");
 
-                alert("Please enter your email.");
+return;
 
-                return;
+}
 
-            }
+try{
 
-            if (!email.includes("@")) {
+await signInWithEmailAndPassword(auth,email,password);
 
-                alert("Please enter a valid email address.");
+alert("Login Successful!");
 
-                return;
+window.location.href="../index.html";
 
-            }
+}
 
-            if (password === "") {
+catch(error){
 
-                alert("Please enter your password.");
+alert(error.message);
 
-                return;
+}
 
-            }
+};
 
-            if (password.length < 6) {
+/* ===============================
+   SIGN UP
+================================*/
 
-                alert("Password must be at least 6 characters.");
+window.signUp = async function(){
 
-                return;
+const name=document.getElementById("signupName").value.trim();
 
-            }
+const email=document.getElementById("signupEmail").value.trim();
 
-            const button = loginForm.querySelector(".login-btn");
+const password=document.getElementById("signupPassword").value;
 
-            button.disabled = true;
-            button.textContent = "Logging In...";
+if(name===""||email===""||password===""){
 
-            setTimeout(() => {
+alert("Please fill all fields.");
 
-                alert("✅ Login successful (Demo Mode).\n\nIn the next milestone this will connect to Supabase.");
+return;
 
-                button.disabled = false;
-                button.textContent = "Login";
+}
 
-            }, 1500);
+try{
 
-        });
+const userCredential=await createUserWithEmailAndPassword(
 
-    }
+auth,
 
-    /* ==========================
-       SHOW / HIDE PASSWORD
-    ========================== */
+email,
 
-    const togglePassword = document.getElementById("togglePassword");
-    const passwordInput = document.getElementById("password");
+password
 
-    if (togglePassword && passwordInput) {
+);
 
-        togglePassword.addEventListener("click", () => {
+await setDoc(
 
-            if (passwordInput.type === "password") {
+doc(db,"users",userCredential.user.uid),
 
-                passwordInput.type = "text";
-                togglePassword.textContent = "🙈";
+{
 
-            } else {
+name:name,
 
-                passwordInput.type = "password";
-                togglePassword.textContent = "👁";
+email:email,
 
-            }
+createdAt:serverTimestamp()
 
-        });
+}
 
-    }
+);
+
+alert("Account Created Successfully!");
+
+window.location.href="../index.html";
+
+}
+
+catch(error){
+
+alert(error.message);
+
+}
+
+};
+
+/* ===============================
+   GOOGLE LOGIN
+================================*/
+
+const provider=new GoogleAuthProvider();
+
+const googleButtons=[
+
+document.getElementById("googleLogin"),
+
+document.getElementById("googleSignup")
+
+];
+
+googleButtons.forEach(btn=>{
+
+if(btn){
+
+btn.addEventListener("click",async()=>{
+
+try{
+
+await signInWithPopup(auth,provider);
+
+window.location.href="../index.html";
+
+}
+
+catch(error){
+
+alert(error.message);
+
+}
 
 });
+
+}
+
+});
+
+/* ===============================
+   FORGOT PASSWORD
+================================*/
+
+window.resetPassword = async function(){
+
+const email=prompt("Enter your registered email");
+
+if(!email) return;
+
+try{
+
+await sendPasswordResetEmail(auth,email);
+
+alert("Password reset email sent.");
+
+}
+
+catch(error){
+
+alert(error.message);
+
+}
+
+};
+
+/* ===============================
+   AUTO LOGIN
+================================*/
+
+onAuthStateChanged(auth,(user)=>{
+
+if(user){
+
+console.log("Logged In:",user.email);
+
+}
+
+});
+
+/* ===============================
+   LOGOUT
+================================*/
+
+window.logout = async function(){
+
+await signOut(auth);
+
+window.location.href="login.html";
+
+};
