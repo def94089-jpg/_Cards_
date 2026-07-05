@@ -1,15 +1,19 @@
 import { auth } from "./firebase-config.js";
 
 import {
-onAuthStateChanged
+  onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
-onAuthStateChanged(auth,(user)=>{
+onAuthStateChanged(auth, (user) => {
 
-    if(!user){
+  if (!user) {
 
-        window.location.href="pages/login.html";
+    const loginPage = window.location.pathname.includes("/pages/")
+      ? "login.html"
+      : "pages/login.html";
 
-    }
+    window.location.href = loginPage;
+
+  }
 
 });
