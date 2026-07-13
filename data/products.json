@@ -43,8 +43,8 @@
     "id": 5,
     "name": "Ivory Classic Card",
     "code": "I1",
-    "price": 1699,
-    "currency": "Bal:$310",
+    "price": 499,
+    "currency": Bal:$190,
     "category": "Ivory",
     "image": "../assets/images/products/I1.jpg",
     "description": "Elegant Ivory Classic card."
@@ -53,8 +53,8 @@
     "id": 6,
     "name": "Ocean Premium Card",
     "code": "O1",
-    "price": 1799,
-    "currency": "Bal:$195",
+    "price": 799,
+    "currency": Bal:$195,
     "category": "Ocean",
     "image": "../assets/images/products/O1.jpg",
     "description": "Ocean Premium edition."
@@ -63,8 +63,8 @@
     "id": 7,
     "name": "Ocean Premium Plus Card",
     "code": "O2",
-    "price": 2249,
-    "currency": "Bal:$299",
+    "price": 599,
+    "currency": Bal:$189,
     "category": "Ocean",
     "image": "../assets/images/products/O2.jpg",
     "description": "Ocean Premium Plus edition."
